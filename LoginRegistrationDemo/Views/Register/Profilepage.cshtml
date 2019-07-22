@@ -1,0 +1,18 @@
+﻿@model LoginRegistrationDemo.Models.User
+@{
+    ViewBag.Title = "Profilepage";
+}
+
+<h2 style="text-align:center">Welcome User...</h2>
+
+
+<fieldset>
+    <legend > Credential Details </legend> 
+    @if (Session["UserName"] != null && Session["Password"] != null)
+    {
+        <text><b>User Name:</b>  @Session["UserName"].ToString() </text>
+        <br/>
+        <text><b>Password :</b>  @Session["Password"].ToString() </text>
+    }
+</fieldset>
+
